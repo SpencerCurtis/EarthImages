@@ -64,12 +64,8 @@
         
         if (errorString) { NSLog(@"%@", errorString); completion(nil); return; }
         
-        NSString *imageURLString = jsonDictionary[@"url"];
-        
-        [self fetchEarthPhotoWithURLString:imageURLString completion:^(UIImage *image) {
-            DMNEarthPhoto *earthPhoto = [[DMNEarthPhoto alloc] initWithDictionary:jsonDictionary];
-            completion(earthPhoto);
-        }];
+        DMNEarthPhoto *earthPhoto = [[DMNEarthPhoto alloc] initWithDictionary:jsonDictionary];
+        completion(earthPhoto);
         
     }] resume];
 }
