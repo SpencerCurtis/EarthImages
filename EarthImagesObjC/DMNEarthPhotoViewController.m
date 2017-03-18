@@ -6,10 +6,10 @@
 //  Copyright © 2017 Spencer Curtis. All rights reserved.
 //
 
-#import "EarthPhotoViewController.h"
-#import "PhotoController.h"
+#import "DMNEarthPhotoViewController.h"
+#import "DMNEarthImageController.h"
 
-@interface EarthPhotoViewController ()
+@interface DMNEarthPhotoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *earthPhotoImageView;
 
@@ -21,10 +21,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
 
-
 @end
 
-@implementation EarthPhotoViewController
+@implementation DMNEarthPhotoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +33,9 @@
 }
 
 - (IBAction)searchButtonTapped:(id)sender {
-    PhotoController *photoController = [PhotoController new];
     
-    [photoController fetchEarthInformationForLatitude:self.latitudeTextField.text longitude:self.longitudeTextField.text completion:^(DMNEarthImage *earthImage) {
+    
+    [DMNEarthImageController fetchEarthInformationForLatitude:self.latitudeTextField.text longitude:self.longitudeTextField.text completion:^(DMNEarthImage *earthImage) {
         
         if (!earthImage.imageURL) {
             UIImage *noPhotoImage = [UIImage imageNamed:@"NoImageFound"];
@@ -46,17 +45,17 @@
                 self.timestampLabel.text = @"";
                 self.identifierLabel.text = @"";
             });
+            
             return;
             
         } else {
-            [photoController fetchEarthImageWithURLString:earthImage.imageURL completion:^(UIImage *image) {
+            [DMNEarthImageController fetchEarthImageWithURLString:earthImage.imageURL completion:^(UIImage *image) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.earthPhotoImageView.image = image;
                     self.timestampLabel.text = earthImage.timestamp;
                     self.identifierLabel.text = earthImage.identifier;
                 });
-                
             }];
         }
     }];

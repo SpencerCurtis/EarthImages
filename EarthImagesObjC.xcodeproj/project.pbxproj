@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		467683C31E6CF3BF00C3A54E /* EarthPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467683C21E6CF3BF00C3A54E /* EarthPhotoViewController.m */; };
+		467683C31E6CF3BF00C3A54E /* DMNEarthPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467683C21E6CF3BF00C3A54E /* DMNEarthPhotoViewController.m */; };
 		467683CC1E6CF65D00C3A54E /* DMNEarthImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 467683CB1E6CF65D00C3A54E /* DMNEarthImage.m */; };
 		46A49A981E688A4F009E2377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A49A971E688A4F009E2377 /* main.m */; };
 		46A49A9B1E688A4F009E2377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A49A9A1E688A4F009E2377 /* AppDelegate.m */; };
@@ -15,12 +15,12 @@
 		46A49AA31E688A4F009E2377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A49AA21E688A4F009E2377 /* Assets.xcassets */; };
 		46A49AA61E688A4F009E2377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A49AA41E688A4F009E2377 /* LaunchScreen.storyboard */; };
 		46A49AAE1E688B54009E2377 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46A49AAD1E688B54009E2377 /* APIKeys.plist */; };
-		46A49AB11E688CAD009E2377 /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A49AB01E688CAD009E2377 /* PhotoController.m */; };
+		46A49AB11E688CAD009E2377 /* DMNEarthImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A49AB01E688CAD009E2377 /* DMNEarthImageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		467683C11E6CF3BF00C3A54E /* EarthPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthPhotoViewController.h; sourceTree = "<group>"; };
-		467683C21E6CF3BF00C3A54E /* EarthPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthPhotoViewController.m; sourceTree = "<group>"; };
+		467683C11E6CF3BF00C3A54E /* DMNEarthPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEarthPhotoViewController.h; sourceTree = "<group>"; };
+		467683C21E6CF3BF00C3A54E /* DMNEarthPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEarthPhotoViewController.m; sourceTree = "<group>"; };
 		467683CA1E6CF65D00C3A54E /* DMNEarthImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEarthImage.h; sourceTree = "<group>"; };
 		467683CB1E6CF65D00C3A54E /* DMNEarthImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEarthImage.m; sourceTree = "<group>"; };
 		46A49A931E688A4F009E2377 /* EarthImagesObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthImagesObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,8 +32,8 @@
 		46A49AA51E688A4F009E2377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46A49AA71E688A4F009E2377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46A49AAD1E688B54009E2377 /* APIKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
-		46A49AAF1E688CAD009E2377 /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoController.h; sourceTree = "<group>"; };
-		46A49AB01E688CAD009E2377 /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoController.m; sourceTree = "<group>"; };
+		46A49AAF1E688CAD009E2377 /* DMNEarthImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNEarthImageController.h; sourceTree = "<group>"; };
+		46A49AB01E688CAD009E2377 /* DMNEarthImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNEarthImageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 		467683C41E6CF41B00C3A54E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				467683C11E6CF3BF00C3A54E /* EarthPhotoViewController.h */,
-				467683C21E6CF3BF00C3A54E /* EarthPhotoViewController.m */,
+				467683C11E6CF3BF00C3A54E /* DMNEarthPhotoViewController.h */,
+				467683C21E6CF3BF00C3A54E /* DMNEarthPhotoViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -59,8 +59,8 @@
 		467683C51E6CF42300C3A54E /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46A49AAF1E688CAD009E2377 /* PhotoController.h */,
-				46A49AB01E688CAD009E2377 /* PhotoController.m */,
+				46A49AAF1E688CAD009E2377 /* DMNEarthImageController.h */,
+				46A49AB01E688CAD009E2377 /* DMNEarthImageController.m */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				467683C31E6CF3BF00C3A54E /* EarthPhotoViewController.m in Sources */,
+				467683C31E6CF3BF00C3A54E /* DMNEarthPhotoViewController.m in Sources */,
 				46A49A9B1E688A4F009E2377 /* AppDelegate.m in Sources */,
-				46A49AB11E688CAD009E2377 /* PhotoController.m in Sources */,
+				46A49AB11E688CAD009E2377 /* DMNEarthImageController.m in Sources */,
 				467683CC1E6CF65D00C3A54E /* DMNEarthImage.m in Sources */,
 				46A49A981E688A4F009E2377 /* main.m in Sources */,
 			);

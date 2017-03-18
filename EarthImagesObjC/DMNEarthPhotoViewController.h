@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EarthPhotoViewController : UIViewController
+@interface DMNEarthPhotoViewController : UIViewController
 
 @end

@@ -6,31 +6,21 @@
 //  Copyright © 2017 Spencer Curtis. All rights reserved.
 //
 
-#import "PhotoController.h"
+#import "DMNEarthImageController.h"
 #import "DMNEarthImage.h"
 
-@interface PhotoController ()
+@interface DMNEarthImageController ()
 
 @property (nonatomic, copy) NSString *baseURLString;
 
 @end
 
-@implementation PhotoController
+@implementation DMNEarthImageController
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _baseURLString = @"https://api.nasa.gov/planetary/earth/imagery";
-    }
-    return self;
-}
-
-
-- (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion:(void (^)(DMNEarthImage *))completion
++ (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion:(void (^)(DMNEarthImage *))completion
 {
     // Get the url, and add on to it (with parameters usually)
-    NSURL *baseURL = [[NSURL alloc] initWithString:self.baseURLString];
+    NSURL *baseURL = [[NSURL alloc] initWithString: @"https://api.nasa.gov/planetary/earth/imagery"];
     
     
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:YES];
@@ -70,7 +60,7 @@
     }] resume];
 }
 
-- (void)fetchEarthImageWithURLString:(NSString *)imageURLString completion:(void (^)(UIImage *))completion
++ (void)fetchEarthImageWithURLString:(NSString *)imageURLString completion:(void (^)(UIImage *))completion
 {
     
     NSURL *imageURL = [NSURL URLWithString:imageURLString];
@@ -90,7 +80,7 @@
     
 }
 
-- (NSString *)fetchAPIKeyFromPlist
++ (NSString *)fetchAPIKeyFromPlist
 {
     // Get the url of the file (in this case, the plist)
     
