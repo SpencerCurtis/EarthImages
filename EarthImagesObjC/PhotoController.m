@@ -7,7 +7,7 @@
 //
 
 #import "PhotoController.h"
-#import "DMNEarthPhoto.h"
+#import "DMNEarthImage.h"
 
 @interface PhotoController ()
 
@@ -27,7 +27,7 @@
 }
 
 
-- (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion:(void (^)(DMNEarthPhoto *))completion
+- (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion:(void (^)(DMNEarthImage *))completion
 {
     // Get the url, and add on to it (with parameters usually)
     NSURL *baseURL = [[NSURL alloc] initWithString:self.baseURLString];
@@ -64,13 +64,13 @@
         
         if (errorString) { NSLog(@"%@", errorString); completion(nil); return; }
         
-        DMNEarthPhoto *earthPhoto = [[DMNEarthPhoto alloc] initWithDictionary:jsonDictionary];
-        completion(earthPhoto);
+        DMNEarthImage *earthImage = [[DMNEarthImage alloc] initWithDictionary:jsonDictionary];
+        completion(earthImage);
         
     }] resume];
 }
 
-- (void)fetchEarthPhotoWithURLString:(NSString *)imageURLString completion:(void (^)(UIImage *))completion
+- (void)fetchEarthImageWithURLString:(NSString *)imageURLString completion:(void (^)(UIImage *))completion
 {
     
     NSURL *imageURL = [NSURL URLWithString:imageURLString];

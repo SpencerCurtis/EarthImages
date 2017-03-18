@@ -6,9 +6,9 @@
 //  Copyright © 2017 Spencer Curtis. All rights reserved.
 //
 
-#import "DMNEarthPhoto.h"
+#import "DMNEarthImage.h"
 
-@implementation DMNEarthPhoto
+@implementation DMNEarthImage
 
 -(instancetype)initWithImageURL:(NSString *)imageURL timestamp:(NSString *)timestamp identifier:(NSString *)identifier
 {

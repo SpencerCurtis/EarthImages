@@ -36,9 +36,9 @@
 - (IBAction)searchButtonTapped:(id)sender {
     PhotoController *photoController = [PhotoController new];
     
-    [photoController fetchEarthInformationForLatitude:self.latitudeTextField.text longitude:self.longitudeTextField.text completion:^(DMNEarthPhoto *earthPhoto) {
+    [photoController fetchEarthInformationForLatitude:self.latitudeTextField.text longitude:self.longitudeTextField.text completion:^(DMNEarthImage *earthImage) {
         
-        if (!earthPhoto.imageURL) {
+        if (!earthImage.imageURL) {
             UIImage *noPhotoImage = [UIImage imageNamed:@"NoImageFound"];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -49,12 +49,12 @@
             return;
             
         } else {
-            [photoController fetchEarthPhotoWithURLString:earthPhoto.imageURL completion:^(UIImage *image) {
+            [photoController fetchEarthImageWithURLString:earthImage.imageURL completion:^(UIImage *image) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.earthPhotoImageView.image = image;
-                    self.timestampLabel.text = earthPhoto.timestamp;
-                    self.identifierLabel.text = earthPhoto.identifier;
+                    self.timestampLabel.text = earthImage.timestamp;
+                    self.identifierLabel.text = earthImage.identifier;
                 });
                 
             }];

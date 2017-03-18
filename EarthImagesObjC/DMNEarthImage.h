@@ -1,5 +1,5 @@
 //
-//  DMNEarthPhoto.h
+//  DMNEarthImage.h
 //  EarthImagesObjC
 //
 //  Created by Spencer Curtis on 3/5/17.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
 
-@interface DMNEarthPhoto : NSObject
+@interface DMNEarthImage : NSObject
 
 - (instancetype)initWithImageURL:(NSString *)imageURL timestamp:(NSString *)timestamp identifier:(NSString *)identifier;
 

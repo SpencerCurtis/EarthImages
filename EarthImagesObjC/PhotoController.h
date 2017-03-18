@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "DMNEarthPhoto.h"
+#import "DMNEarthImage.h"
 
 @interface PhotoController : NSObject
 
-- (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion: (void(^)(DMNEarthPhoto *earthPhoto))completion;
+- (void)fetchEarthInformationForLatitude:(NSString *)latitude longitude:(NSString *)longitude completion: (void(^)(DMNEarthImage *earthImage))completion;
 
-- (void)fetchEarthPhotoWithURLString:(NSString *)imageURLString completion: (void(^)(UIImage *image))completion;
+- (void)fetchEarthImageWithURLString:(NSString *)imageURLString completion: (void(^)(UIImage *image))completion;
 
 - (NSString *)fetchAPIKeyFromPlist;
 
